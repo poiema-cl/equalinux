@@ -1,0 +1,7 @@
+# Autor: DeepSeek (model GLM, harness DSH) - 2026-10-11
+# Por qué: artefactos regenerables y estado local del dueño.
+build/
+dist/
+__pycache__/
+*.pyc
+nohup.out
