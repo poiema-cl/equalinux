@@ -11,5 +11,5 @@ Icon=equalinux
 Terminal=false
 Categories=AudioVideo;Audio;Mixer;
 Keywords=equalizer;eq;audio;sound;pulse;pulseaudio;ecualizador;sonido;
-StartupWMClass=Equalinux
+StartupWMClass=com.poiema.Equalinux
 X-GNOME-UsesNotifications=false

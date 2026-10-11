@@ -69,7 +69,7 @@ cp -r data "$DESTINO/usr/lib/equalinux/data"
 rm -rf "$DESTINO/usr/lib/equalinux/equalinux/__pycache__" \
        "$DESTINO/usr/lib/equalinux/equalinux"/*/__pycache__
 install -m 755 bin/equalinux "$DESTINO/usr/bin/equalinux"
-install -m 644 data/equalinux.desktop "$DESTINO/usr/share/applications/equalinux.desktop"
+install -m 644 data/com.poiema.Equalinux.desktop "$DESTINO/usr/share/applications/com.poiema.Equalinux.desktop"
 install -m 644 data/icons/equalinux-48.png   "$DESTINO/usr/share/icons/hicolor/48x48/apps/equalinux.png"
 install -m 644 data/icons/equalinux-128.png  "$DESTINO/usr/share/icons/hicolor/128x128/apps/equalinux.png"
 install -m 644 data/icons/equalinux.svg     "$DESTINO/usr/share/icons/hicolor/scalable/apps/equalinux.svg"

@@ -10,7 +10,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from equalinux import __version__  # noqa: E402
 
 RAIZ = os.path.join(os.path.dirname(__file__), "..")
-DESKTOP = os.path.join(RAIZ, "data", "equalinux.desktop")
+DESKTOP = os.path.join(RAIZ, "data", "com.poiema.Equalinux.desktop")
 LANZADOR = os.path.join(RAIZ, "bin", "equalinux")
 BUILD = os.path.join(RAIZ, "scripts", "build_deb.sh")
 LICENCIA = os.path.join(RAIZ, "LICENSE")
@@ -39,6 +39,9 @@ def test_desktop_campos_clave():
     assert claves["Name"] == "Equalinux"
     assert claves["Exec"] == "equalinux"
     assert "Audio" in claves["Categories"]
+    # Regla E11: el .desktop debe llamarse como el application-id
+    assert os.path.basename(DESKTOP) == claves.get(
+        "StartupWMClass", "") + ".desktop"
 
 
 def test_lanzador_ejecutable():
