@@ -1,0 +1,17 @@
+#!/bin/sh
+# Autor: DeepSeek (model GLM, harness DSH) - 2026-10-11
+# Por qué: lanzador de Equalinux: usa la instalación del sistema si existe
+# (/usr/lib/equalinux) y si no, corre desde la carpeta del proyecto (modo dev).
+# Licencia: GPL-3.0 (igual que el proyecto).
+
+set -e
+
+SISTEMA=/usr/lib/equalinux
+if [ -d "$SISTEMA/equalinux" ]; then
+    exec env PYTHONPATH="$SISTEMA" python3 -m equalinux.main "$@"
+fi
+
+# Modo desarrollo: carpeta del repositorio (bin/ está junto al paquete)
+AQUI=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+cd "$AQUI"
+exec python3 -m equalinux.main "$@"

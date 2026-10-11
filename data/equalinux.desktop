@@ -1,0 +1,15 @@
+# Autor: DeepSeek (model GLM, harness DSH) - 2026-10-11
+# Por qué: entrada del menú de aplicaciones para Equalinux.
+[Desktop Entry]
+Type=Application
+Name=Equalinux
+GenericName=Ecualizador del sistema
+Comment=Ecualizador gráfico de 15 bandas para todo el audio del sistema (PulseAudio)
+Comment[es]=Ecualizador gráfico de 15 bandas para todo el audio del sistema (PulseAudio)
+Exec=equalinux
+Icon=equalinux
+Terminal=false
+Categories=AudioVideo;Audio;Mixer;
+Keywords=equalizer;eq;audio;sound;pulse;pulseaudio;ecualizador;sonido;
+StartupWMClass=Equalinux
+X-GNOME-UsesNotifications=false

@@ -1,0 +1,33 @@
+.\" Autor: DeepSeek (model GLM, harness DSH) - 2026-10-11
+.\" Por qué: página de manual mínima de Equalinux (requerida por lintian).
+.\" Licencia: GPL-3.0 (igual que el proyecto).
+.TH EQUALINUX 1 "2026-10-11" "Equalinux 0.1.0" "Manual de usuario"
+.SH NOMBRE
+equalinux \- ecualizador gráfico de 15 bandas para todo el audio del sistema
+.SH SINOPSIS
+.B equalinux
+.SH DESCRIPCIÓN
+Equalinux ecualiza el audio completo del sistema (música, vídeos,
+navegador) creando una salida virtual sobre PulseAudio con el plugin LADSPA
+.B mbeq
+y controlando las 15 bandas en caliente vía D\-Bus.
+Incluye 24 preajustes generales (Rock, Pop, Jazz, Podcast, Nocturno, Cine,
+Gaming, ...) y permite guardar preajustes personales en
+.IR ~/.config/equalinux/presets/ .
+.SH TECLAS
+.TP
+.B F11
+Maximizar / restaurar la ventana (y recordarlo para la próxima vez).
+.SH ARCHIVOS
+.TP
+.I ~/.config/equalinux/state.json
+Estado (preajuste, niveles, salida maestra, activado).
+.TP
+.I ~/.config/equalinux/presets/*.json
+Preajustes personales del usuario.
+.SH DEPENDENCIAS
+python3\-gi, gir1.2\-gtk\-4.0, python3\-dbus, pulseaudio\-utils, swh\-plugins.
+.SH LICENCIA
+GPL\-3.0: ver /usr/share/common\-licenses/GPL\-3.
+.SH AUTOR
+Angel (desarrollo asistido por DeepSeek, model GLM, harness DSH).
